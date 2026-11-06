@@ -1,0 +1,6 @@
+{
+  "name": "Advanced Industrial Data Engineering & Securing Digital Twins",
+  "description": "Technical Presentation Dashboard by Dr. Anwr Altahir for the 3D Printing & Smart Manufacturing Conference 2026 in Doha, Qatar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #061a3d;
+    --bg-card: #08275a;
+    --accent-blue: #168bff;
+    --accent-cyan: #38c8ff;
+  }
+
+  html, body, #root {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+    overscroll-behavior: none;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #061a3d;
+    color: #dce5f2;
+    color-scheme: dark;
+  }
+
+  html[dir="rtl"], html[dir="rtl"] body {
+    font-family: 'Cairo', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Zero scrollbar presentation rules */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0px !important;
+  height: 0px !important;
+}
+
+/* Keyframe animations for digital twin telemetry flows */
+@keyframes slide-right {
+  0% {
+    left: -33%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    right: -33%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes laser-sweep {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.animate-slide-right {
+  animation: slide-right 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-slide-left {
+  animation: slide-left 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Grid overlay */
+.conference-grid {
+  background-image: 
+    linear-gradient(to right, rgba(22, 139, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22, 139, 255, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
